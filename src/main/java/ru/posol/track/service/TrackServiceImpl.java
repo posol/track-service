@@ -32,6 +32,7 @@ public class TrackServiceImpl implements TrackService {
 
     @Override
     public List<Track> getAllTracks() {
-        return trackRepository.findTop50OrderByNameDesc();
+        //return trackRepository.findTop50OrderByNameDesc();
+        return trackRepository.findAll();
     }
 }

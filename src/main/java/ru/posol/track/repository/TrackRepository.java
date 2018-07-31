@@ -14,7 +14,8 @@ public interface TrackRepository extends CrudRepository<Track, Long> {
     /**
      * @return the latest 50 Tracks
      */
-    List<Track> findTop50OrderByNameDesc();
+    //List<Track> findTop50OrderByNameDesc();
+    List<Track> findAll();
 
     Optional<Track> findByName(final String name);
 

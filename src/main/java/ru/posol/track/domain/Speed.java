@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @RequiredArgsConstructor
@@ -15,10 +16,10 @@ import javax.persistence.Embeddable;
 public class Speed {
 
     private final String unit;
-    private final double value;
+    private final Double value;
 
     Speed() {
         unit = null;
-        value = 0;
+        value = null;
     }
 }

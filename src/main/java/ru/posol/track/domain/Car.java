@@ -1,5 +1,6 @@
 package ru.posol.track.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,7 @@ public class Car {
     private final String code;
     private final String transmission;
     private final String ai;
+    @JsonProperty("max-speed")
     private final Speed maxSpeed;
 
     Car() {

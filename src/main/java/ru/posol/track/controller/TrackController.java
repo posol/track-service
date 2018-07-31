@@ -33,7 +33,7 @@ public class TrackController {
         log.info("Sending track {} on server @ {}", track, serverPort);
         return ResponseEntity.ok(trackService.createTrack(track));
     }
-
+    в обоих методах на вход и на выход должен быть врапер над треком - как в примере с жейсоном
     @GetMapping
     ResponseEntity<List<Track>> getTracs() {
         return ResponseEntity.ok(trackService.getAllTracks());

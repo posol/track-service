@@ -5,10 +5,8 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Stores information about Track.
@@ -22,14 +20,26 @@ public class Track {
 
     @Id
     @GeneratedValue
-    @Column(name = "USER_ID")
+    @Column(name = "TRACK_ID")
     private Long id;
 
-    private final String name;
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    @JoinTable(
+            name = "TRACK_CAR",
+            joinColumns = @JoinColumn(name = "TRACK_ID"),
+            inverseJoinColumns = @JoinColumn(name = "CAR_ID")
+    )
+    private final List<Car> cars;
 
-    // Empty constructor for JSON/JPA
-    protected Track() {
+    private final String name;
+    private final String description;
+    private final Length length;
+
+    Track() {
         name = null;
+        description = null;
+        length = null;
+        cars = null;
     }
 
 }

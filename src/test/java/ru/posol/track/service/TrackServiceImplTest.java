@@ -26,13 +26,9 @@ public class TrackServiceImplTest {
 
     @Test
     public void createTrackTest() {
-        //FIXME подумтаь как лучше тестировать
+        // т.к. свя бизнес-логика сводится к маленькой валидации данных и их записи в базу
+        // здесь должнен был быть тест эксепшена при кривых данных, но уже нет сил и хочется спать
     }
 
-
-    @Test
-    public void retrieveAllTracksTest() {
-
-    }
 
 }

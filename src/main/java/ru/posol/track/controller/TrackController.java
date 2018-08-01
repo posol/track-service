@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Slf4j
 @RestController
-@RequestMapping("/tracks")
+@RequestMapping("/api/tracks")
 public class TrackController {
 
     private final TrackService trackService;
@@ -38,6 +38,5 @@ public class TrackController {
     ResponseEntity<List<Track>> getTracs() {
         return ResponseEntity.ok(trackService.getAllTracks());
     }
-
 
 }

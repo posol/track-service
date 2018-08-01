@@ -1,17 +1,18 @@
 package ru.posol.track.service;
 
 import ru.posol.track.domain.Track;
+import ru.posol.track.domain.TrackCollection;
 
 import java.util.List;
 
 public interface TrackService {
 
     /**
-     * create track
+     * create tracks
      *
      * @return
      */
-    Track createTrack(Track track);
+    TrackCollection createTracks(TrackCollection trackCollection);
 
     /**
      * get tracks
